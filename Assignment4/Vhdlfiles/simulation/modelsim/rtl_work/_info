@@ -1,0 +1,503 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/drsak/Downloads/Vhdlfiles/simulation/modelsim
+Ea_and_b
+Z1 w1666370504
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 3
+R0
+Z4 8C:/Users/drsak/Downloads/Vhdlfiles/logicgate.vhd
+Z5 FC:/Users/drsak/Downloads/Vhdlfiles/logicgate.vhd
+l0
+L4 1
+V`5o2S2@zdWL[FPd^@;aUP3
+!s100 =<?J@7@GW7ZiFRP63l@5J2
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1666371015
+!i10b 1
+Z8 !s108 1666371015.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/drsak/Downloads/Vhdlfiles/logicgate.vhd|
+Z10 !s107 C:/Users/drsak/Downloads/Vhdlfiles/logicgate.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Atrivial
+R2
+R3
+DEx4 work 7 a_and_b 0 22 `5o2S2@zdWL[FPd^@;aUP3
+!i122 3
+l9
+L8 4
+VN3@A1DWl;cii]0Q388BFL1
+!s100 YD50URLgB=7c^J17Kdbgk1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ea_and_bc
+R1
+R2
+R3
+!i122 3
+R0
+R4
+R5
+l0
+L26 1
+VKZePnl^9_M:TSd7A5IULJ1
+!s100 OfmU5W2FI]em0T2IcM:zR2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Atrivial
+R2
+R3
+DEx4 work 8 a_and_bc 0 22 KZePnl^9_M:TSd7A5IULJ1
+!i122 3
+l31
+L30 4
+VJ>bTI7o5PK]4_:z808nN21
+!s100 VdDO13DF7WJB`G;Y2aK>J1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ebrent_kung_adder
+Z13 w1666370882
+R2
+R3
+!i122 1
+R0
+Z14 8C:/Users/drsak/Downloads/Vhdlfiles/BRENTKUNKADDER.vhd
+Z15 FC:/Users/drsak/Downloads/Vhdlfiles/BRENTKUNKADDER.vhd
+l0
+L4 1
+VhYGPF=cQ7F:NOnmIGXoi?3
+!s100 d0RjTmm@m_kFc=IXFUQee1
+R6
+31
+R7
+!i10b 1
+Z16 !s108 1666371014.000000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/drsak/Downloads/Vhdlfiles/BRENTKUNKADDER.vhd|
+Z18 !s107 C:/Users/drsak/Downloads/Vhdlfiles/BRENTKUNKADDER.vhd|
+!i113 1
+R11
+R12
+Asimple
+R2
+R3
+DEx4 work 16 brent_kung_adder 0 22 hYGPF=cQ7F:NOnmIGXoi?3
+!i122 1
+l35
+L9 82
+VR4U;@D;L`k3FR^e>;9;XD1
+!s100 PSX>khdFU6Dg6T1[5<miG3
+R6
+31
+R7
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R11
+R12
+Ecin_map_g
+R1
+R2
+R3
+!i122 3
+R0
+R4
+R5
+l0
+L38 1
+V6EeFM3cSe0bF?8jzkKibH1
+!s100 690d::OK;hhSSP1T]RXcj2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Atrivial
+R2
+R3
+DEx4 work 9 cin_map_g 0 22 6EeFM3cSe0bF?8jzkKibH1
+!i122 3
+l43
+L42 4
+VV?Tf0M_G:AK:U[kilZNRY0
+!s100 X]RMbRWo;U:Ig9BnGoUG10
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edut
+Z19 w1665647290
+R2
+R3
+!i122 0
+R0
+Z20 8C:/Users/drsak/Downloads/Vhdlfiles/DUT.vhd
+Z21 FC:/Users/drsak/Downloads/Vhdlfiles/DUT.vhd
+l0
+L7 1
+V<QK?m28ifBFKzDiUVCcdT3
+!s100 3bClAgNgO_@;L4?=_CX2X0
+R6
+31
+Z22 !s110 1666371014
+!i10b 1
+R16
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/drsak/Downloads/Vhdlfiles/DUT.vhd|
+Z24 !s107 C:/Users/drsak/Downloads/Vhdlfiles/DUT.vhd|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 <QK?m28ifBFKzDiUVCcdT3
+!i122 0
+l17
+L11 18
+V1eCPbEGiN@^@16n]kAKO?0
+!s100 V1B6:9LAI_TE87<n`OUBz1
+R6
+31
+R22
+!i10b 1
+R16
+R23
+R24
+!i113 1
+R11
+R12
+Elevel_1
+Z25 w1665647420
+R2
+R3
+!i122 2
+R0
+Z26 8C:/Users/drsak/Downloads/Vhdlfiles/Treelevel.vhd
+Z27 FC:/Users/drsak/Downloads/Vhdlfiles/Treelevel.vhd
+l0
+L4 1
+VTHCJ<0@HnYJkmLnBMoBMG2
+!s100 BZocL>`cN8UW2V_]C=AYD3
+R6
+31
+R7
+!i10b 1
+R8
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/drsak/Downloads/Vhdlfiles/Treelevel.vhd|
+Z29 !s107 C:/Users/drsak/Downloads/Vhdlfiles/Treelevel.vhd|
+!i113 1
+R11
+R12
+Asimple
+R2
+R3
+DEx4 work 7 level_1 0 22 THCJ<0@HnYJkmLnBMoBMG2
+!i122 2
+l15
+L8 59
+V?I_U8`VMFMhK]lhVPEZi`3
+!s100 ZZWdQV<fzzF;7nG@HNllS0
+R6
+31
+R7
+!i10b 1
+R8
+R28
+R29
+!i113 1
+R11
+R12
+Elevel_2
+R25
+R2
+R3
+!i122 2
+R0
+R26
+R27
+l0
+L72 1
+VHLZQJ2O70Cf7bmgFDaS;N0
+!s100 `]We_RT]lG2:Jc3fZzkPR2
+R6
+31
+R7
+!i10b 1
+R8
+R28
+R29
+!i113 1
+R11
+R12
+Asimple
+R2
+R3
+DEx4 work 7 level_2 0 22 HLZQJ2O70Cf7bmgFDaS;N0
+!i122 2
+l82
+L76 35
+V]5UbMbUoSnAn1d=jXi1mV3
+!s100 NC@mQ4z8VYi4zL?b[U6T^1
+R6
+31
+R7
+!i10b 1
+R8
+R28
+R29
+!i113 1
+R11
+R12
+Elevel_3
+R25
+R2
+R3
+!i122 2
+R0
+R26
+R27
+l0
+L117 1
+V1Mmj431hC4:ba>3<iJlH:2
+!s100 5MWLeZRR0nAiF`Q<<hSb[2
+R6
+31
+R7
+!i10b 1
+R8
+R28
+R29
+!i113 1
+R11
+R12
+Asimple
+R2
+R3
+DEx4 work 7 level_3 0 22 1Mmj431hC4:ba>3<iJlH:2
+!i122 2
+l127
+L121 22
+VnBgfNIgP_7=UdNR`ojo^H1
+!s100 kf7Lk>F@:F_iEb;_mTM9k0
+R6
+31
+R7
+!i10b 1
+R8
+R28
+R29
+!i113 1
+R11
+R12
+Elevel_4
+R25
+R2
+R3
+!i122 2
+R0
+R26
+R27
+l0
+L148 1
+V4gacch^lnNl^dNVB<zn012
+!s100 RB67>?bcZ8P@M^nT>9@OL3
+R6
+31
+R7
+!i10b 1
+R8
+R28
+R29
+!i113 1
+R11
+R12
+Asimple
+R2
+R3
+DEx4 work 7 level_4 0 22 4gacch^lnNl^dNVB<zn012
+!i122 2
+l158
+L152 16
+VCjU^dS_3@29`He7nm1HzP0
+!s100 Cd>IoabUWiCg@DNgE5JM^2
+R6
+31
+R7
+!i10b 1
+R8
+R28
+R29
+!i113 1
+R11
+R12
+Elevel_5
+R25
+R2
+R3
+!i122 2
+R0
+R26
+R27
+l0
+L173 1
+V?GQM4lAcokgCo=EA1Weh?0
+!s100 459M7PWjLbm?Eaa[8OT5g3
+R6
+31
+R7
+!i10b 1
+R8
+R28
+R29
+!i113 1
+R11
+R12
+Asimple
+R2
+R3
+DEx4 work 7 level_5 0 22 ?GQM4lAcokgCo=EA1Weh?0
+!i122 2
+l183
+L177 13
+V_>j<ZQmTUfhfR>h:<ekBG0
+!s100 Me2h`[]DZDP[MNlN449z^1
+R6
+31
+R7
+!i10b 1
+R8
+R28
+R29
+!i113 1
+R11
+R12
+Etestbench
+Z30 w1665593296
+R3
+R2
+!i122 4
+R0
+Z31 8C:/Users/drsak/Downloads/Vhdlfiles/testbench.vhdl
+Z32 FC:/Users/drsak/Downloads/Vhdlfiles/testbench.vhdl
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R7
+!i10b 1
+R8
+Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/drsak/Downloads/Vhdlfiles/testbench.vhdl|
+!s107 C:/Users/drsak/Downloads/Vhdlfiles/testbench.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 4
+l69
+L9 132
+VO=jdTF@Vg7AXWd3[;n@m@0
+!s100 iDARmGUE]c^:2O9n4>>k52
+R6
+31
+R7
+!i10b 1
+R8
+R33
+Z34 !s107 C:/Users/drsak/Downloads/Vhdlfiles/testbench.vhdl|
+!i113 1
+R11
+R12
+Exor2
+R1
+R2
+R3
+!i122 3
+R0
+R4
+R5
+l0
+L15 1
+ViO11QB[GLlc6@a?DgBPW<2
+!s100 =^=@@enj7oP:@OKN15REM1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Atrivial
+R2
+R3
+DEx4 work 4 xor2 0 22 iO11QB[GLlc6@a?DgBPW<2
+!i122 3
+l20
+L19 4
+V;n]g0ihFhEDOB_F<efQNJ0
+!s100 4@Rz@]K;^Noi51:5Wc?NW1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12

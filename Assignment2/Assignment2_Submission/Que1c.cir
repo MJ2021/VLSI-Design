@@ -1,0 +1,38 @@
+*Xor using CPL
+.include Unit_inv.txt
+.include matrix.txt
+.include models-180nm
+
+.param Trep1= 40n
+.param Trep2 = {Trep1/2.0}
+.param Trf = {Trep1/20.0}
+.param Tw1 = {Trep1/2.0 - Trf}
+.param Tw2 = {Trep2/2.0 - Trf}
+.param hival=1.6
+.param loval=0.2
+V1 A 0 DC 0 PULSE({loval} {hival} {Tw1} {Trf} {Trf} {Tw1} {Trep1})
+V2 Abar 0 DC 0 PULSE({hival} {loval} {Tw1+2n} {Trf} {Trf} {Tw1} {Trep1})
+V3 B 0 DC 0 PULSE({loval} {hival} {Tw2} {Trf} {Trf} {Tw2} {Trep2})
+V4 Bbar 0 DC 0 PULSE({hival} {loval} {Tw2+2n} {Trf} {Trf} {Tw2} {Trep2})
+.tran 1pS {3*Trep1} 0nS
+vdd supply 0 dc 1.8
+x0 B Bbar Bbar B A Abar 1 2 swmat
+v11 supply 11 dc 0
+x1 11 1 xor1 inv 
+v22 supply 22 dc 0
+x2 22 2 xnor1 inv
+C11 xor1 0 152fF
+C12 xnor1 0 152fF 
+MP1 1 xor1 Supply Supply cmosp
++ L=0.18U W=0.24U AD = 0.0864P AS = 0.0864P PD = 1.2U PS = 1.2U
+MP2 2 xnor1 Supply Supply cmosp
++ L=0.18U W=0.24U AD = 0.0864P AS = 0.0864P PD = 1.2U PS = 1.2U
+.control
+run
+meas tran idd_avg_xor AVG i(v11) from=0nS to={3*Trep1}
+meas tran idd_avg_xnor AVG i(v22) from=0nS to={3*Trep1}
+plot V(A)+6 V(Abar)+6 V(B)+4 V(Bbar)+4 V(1)+2 V(2)+2 V(xor1) V(xnor1) 
+plot i(v11) i(v22)
+.endc
+.end
+

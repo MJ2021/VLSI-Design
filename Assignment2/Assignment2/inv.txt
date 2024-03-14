@@ -1,0 +1,12 @@
+* Unit Inverter
+.subckt inv supply Inp Output
+
+.param w_p=1.1897500U	 a_p=0.360U*w_p 	p_p=0.72U+2*w_p
+.param w_n=0.3725610U	 a_n=0.360U*w_n 	p_n=0.72U+2*w_n
+
+* This subcircuit defines a CMOS inverter with equal n and p widths
+MP1 Output Inp Supply Supply cmosp
++ L=0.18U W=w_p AD = a_p AS = a_p PD = p_p PS = p_p
+MN1 Output Inp 0 0 cmosn
++ L=0.18U W=w_n AD = a_n AS = a_n PD = p_n PS = p_n
+.ends

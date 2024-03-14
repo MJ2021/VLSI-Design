@@ -1,0 +1,62 @@
+* Logic Effort Measurement
+
+.include models-180nm
+
+* Unit Inverter
+.subckt inv supply Inp Output
+.param	w_pmos=1.2961392U	a_pmos=0.36U*w_pmos	p_pmos=0.72U+2*w_pmos
+.param	w_nmos=0.4162298U	a_nmos=0.36U*w_nmos	p_nmos=0.72U+2*w_nmos
+MP1 Output Inp Supply Supply cmosp
++ L=0.18U W=w_pmos AD = a_pmos AS = a_pmos PD = p_pmos PS = p_pmos
+MN1 Output Inp 0 0 cmosn
++ L=0.18U W=w_nmos AD = a_nmos AS = a_nmos PD = p_nmos PS = p_nmos
+.ends
+
+vdd supply 0 dc 1.8
+
+xis0 supply pgen ismid inv
+
+xis1 supply ismid dutin inv
+xis2 supply ismid isout inv
+xis3 supply ismid isout inv
+xis4 supply ismid isout inv
+
+cis isout 0 0.1pF
+* DUT
+xdut supply dutin dutout inv
+
+* Add inverters numbered from 1 to 8
+xtl1 supply dutout tlout inv
+*xtl2 supply dutout tlout inv
+*xtl3 supply dutout tlout inv
+*xtl4 supply dutout tlout inv
+*xtl5 supply dutout tlout inv
+*xtl6 supply dutout tlout inv
+*xtl7 supply dutout tlout inv
+*xtl8 supply dutout tlout inv
+
+xll1 supply tlout llout inv
+xll2 supply tlout llout inv
+xll3 supply tlout llout inv
+xll4 supply tlout llout inv
+
+cll llout 0 0.1pF
+
+* pulse with time period of Trep, rise and fall times = Trep/20
+.param Trep= 5n
+.param Trf = {Trep/20.0}
+.param Tw = {Trep/2.0 - Trf}
+.param hival=1.8
+.param loval=0.0
+Vpulse pgen 0 DC 0 PULSE({loval} {hival} {Tw} {Trf} {Trf} {Tw} {Trep})
+.tran 0.1pS {3*Trep} 0nS
+
+.control
+run
+plot V(pgen) 2+V(dutin) 4+V(dutout)
+meas tran invdelay1 TRIG v(dutin) VAL=0.9 RISE=2 TARG v(dutout) VAL=0.9 FALL=2
+meas tran invdelay2 TRIG v(dutin) VAL=0.9 FALL=2 TARG v(dutout) VAL=0.9 RISE=2
+let invdelayavg = (invdelay1+invdelay2)/2
+print invdelayavg
+.endc
+.end

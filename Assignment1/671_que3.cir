@@ -1,0 +1,43 @@
+* Unit Exp
+.subckt Exp supply InpA InpB InpC Output
+
+.param w_p=1.2961392U	 a_p=0.360U*w_p 	p_p=0.72U+2*w_p
+.param w_n=0.4162298U	 a_n=0.360U*w_n 	p_n=0.72U+2*w_n
+
+* This subcircuit defines a CMOS inverter with equal n and p widths
+MPA Output InpA Supply Supply cmosp
++ L=0.18U W=w_p AD = a_p AS = a_p PD = p_p PS = p_p
+MPB Output1 InpB Supply Supply cmosp
++ L=0.18U W=w_p AD = a_p AS = a_p PD = p_p PS = p_p
+MPC Output InpC Output1 Output1 cmosp
++ L=0.18U W=w_p AD = a_p AS = a_p PD = p_p PS = p_p
+MNA Output InpA Node1 Node1 cmosn
++ L=0.18U W=w_n AD = a_n AS = a_n PD = p_n PS = p_n
+MNB Node1 InpB 0 0 cmosn
++ L=0.18U W=w_n AD = a_n AS = a_n PD = p_n PS = p_n
+MNC Node1 InpC 0 0 cmosn
++ L=0.18U W=w_n AD = a_n AS = a_n PD = p_n PS = p_n
+.ends
+vdd supply 0 dc 1.8
+* Device under test
+x3 supply inpA inpB inpC dutout Exp
+* Load Capacitor
+C3 dutout 0 0.05pF
+
+.include models-180nm
+*TRANSIENT ANALYSIS with pulse inputs
+VinpA inpA 0 DC 0 PWL(0 0 20pS 1.8 4nS 1.8 4020pS 0 8nS 0 8020pS 1.8)
+VinpB inpB 0 DC 0 PWL(0 0 20pS 1.8 12nS 1.8 12020pS 0 16nS 0 16020pS 1.8 20nS 1.8 20020pS 0)
+VinpC inpC 0 DC 0 PWL(0 0 20pS 1.8 12nS 1.8 12020pS 0 24nS 0 24020pS 1.8 28nS 1.8 28020pS 0)
+.tran 1pS 35nS 0nS
+.control
+run
+plot 6.0+V(inpA) 4.0+V(inpB) 2.0+V(inpC) V(dutout)
+meas tran rise011 TRIG v(dutout) VAL=0.18 RISE=1 TARG v(dutout) VAL=1.62 RISE=1
+meas tran fall111 TRIG v(dutout) VAL=1.62 FALL=2 TARG v(dutout) VAL=0.18 FALL=2
+meas tran rise100 TRIG v(dutout) VAL=0.18 RISE=3 TARG v(dutout) VAL=1.62 RISE=3
+meas tran fall110 TRIG v(dutout) VAL=1.62 FALL=3 TARG v(dutout) VAL=0.18 FALL=3
+meas tran rise100 TRIG v(dutout) VAL=0.18 RISE=4 TARG v(dutout) VAL=1.62 RISE=4
+meas tran fall101 TRIG v(dutout) VAL=1.62 FALL=4 TARG v(dutout) VAL=0.18 FALL=4
+.endc
+.end

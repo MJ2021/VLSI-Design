@@ -1,0 +1,209 @@
+Analysis & Elaboration report for DUT
+Thu Nov 10 19:50:24 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "mac:adder_instance|brent_kung_adder:final_instance"
+  6. Analysis & Elaboration Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Thu Nov 10 19:50:24 2022       ;
+; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                 ; DUT                                         ;
+; Top-level Entity Name         ; DUT                                         ;
+; Family                        ; MAX V                                       ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                            ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 5M2210ZF324I5      ;                    ;
+; Top-level entity name                                            ; DUT                ; DUT                ;
+; Family name                                                      ; MAX V              ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++--------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mac:adder_instance|brent_kung_adder:final_instance" ;
++------+-------+----------+------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                              ;
++------+-------+----------+------------------------------------------------------+
+; c0   ; Input ; Info     ; Stuck at GND                                         ;
++------+-------+----------+------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Nov 10 19:50:08 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MAC -c DUT --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file multiply_and_add.vhdl
+    Info (12022): Found design unit 1: mac-arch File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Multiply_and_add.vhdl Line: 10
+    Info (12023): Found entity 1: mac File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Multiply_and_add.vhdl Line: 3
+Info (12021): Found 10 design units, including 5 entities, in source file treelevel.vhd
+    Info (12022): Found design unit 1: Level_1-simple File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Treelevel.vhd Line: 8
+    Info (12022): Found design unit 2: Level_2-simple File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Treelevel.vhd Line: 76
+    Info (12022): Found design unit 3: Level_3-simple File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Treelevel.vhd Line: 121
+    Info (12022): Found design unit 4: Level_4-simple File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Treelevel.vhd Line: 152
+    Info (12022): Found design unit 5: Level_5-simple File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Treelevel.vhd Line: 177
+    Info (12023): Found entity 1: Level_1 File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Treelevel.vhd Line: 4
+    Info (12023): Found entity 2: Level_2 File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Treelevel.vhd Line: 72
+    Info (12023): Found entity 3: Level_3 File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Treelevel.vhd Line: 117
+    Info (12023): Found entity 4: Level_4 File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Treelevel.vhd Line: 148
+    Info (12023): Found entity 5: Level_5 File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Treelevel.vhd Line: 173
+Info (12021): Found 2 design units, including 1 entities, in source file brentkunkadder.vhd
+    Info (12022): Found design unit 1: brent_kung_adder-simple File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/BRENTKUNKADDER.vhd Line: 9
+    Info (12023): Found entity 1: brent_kung_adder File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/BRENTKUNKADDER.vhd Line: 4
+Info (12021): Found 8 design units, including 4 entities, in source file logicgate.vhd
+    Info (12022): Found design unit 1: a_and_b-trivial File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/logicgate.vhd Line: 8
+    Info (12022): Found design unit 2: xor2-trivial File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/logicgate.vhd Line: 19
+    Info (12022): Found design unit 3: a_and_bc-trivial File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/logicgate.vhd Line: 30
+    Info (12022): Found design unit 4: Cin_map_G-trivial File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/logicgate.vhd Line: 42
+    Info (12023): Found entity 1: a_and_b File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/logicgate.vhd Line: 4
+    Info (12023): Found entity 2: xor2 File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/logicgate.vhd Line: 15
+    Info (12023): Found entity 3: a_and_bc File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/logicgate.vhd Line: 26
+    Info (12023): Found entity 4: Cin_map_G File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/logicgate.vhd Line: 38
+Info (12021): Found 2 design units, including 1 entities, in source file dut.vhd
+    Info (12022): Found design unit 1: DUT-DutWrap File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/DUT.vhd Line: 11
+    Info (12023): Found entity 1: DUT File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/DUT.vhd Line: 7
+Info (12021): Found 4 design units, including 2 entities, in source file higherlogic.vhd
+    Info (12022): Found design unit 1: half_adder-struct File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/higherlogic.vhd Line: 8
+    Info (12022): Found design unit 2: full_adder-struct File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/higherlogic.vhd Line: 29
+    Info (12023): Found entity 1: half_adder File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/higherlogic.vhd Line: 4
+    Info (12023): Found entity 2: full_adder File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/higherlogic.vhd Line: 25
+Info (12127): Elaborating entity "DUT" for the top level hierarchy
+Info (12128): Elaborating entity "mac" for hierarchy "mac:adder_instance" File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/DUT.vhd Line: 22
+Info (12128): Elaborating entity "a_and_b" for hierarchy "mac:adder_instance|a_and_b:\AND_generate_ii:0:AND_generate_jj:0:and_insta" File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Multiply_and_add.vhdl Line: 48
+Info (12128): Elaborating entity "half_adder" for hierarchy "mac:adder_instance|half_adder:Nine_HA5" File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Multiply_and_add.vhdl Line: 56
+Info (12128): Elaborating entity "xor2" for hierarchy "mac:adder_instance|half_adder:Nine_HA5|xor2:sum0" File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/higherlogic.vhd Line: 16
+Info (12128): Elaborating entity "full_adder" for hierarchy "mac:adder_instance|full_adder:Nine_FA6" File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Multiply_and_add.vhdl Line: 57
+Info (12128): Elaborating entity "Cin_map_G" for hierarchy "mac:adder_instance|full_adder:Nine_FA6|Cin_map_G:sum_1" File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/higherlogic.vhd Line: 43
+Info (12128): Elaborating entity "brent_kung_adder" for hierarchy "mac:adder_instance|brent_kung_adder:final_instance" File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Multiply_and_add.vhdl Line: 131
+Info (12128): Elaborating entity "Level_1" for hierarchy "mac:adder_instance|brent_kung_adder:final_instance|Level_1:lev1" File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/BRENTKUNKADDER.vhd Line: 38
+Info (12128): Elaborating entity "Level_2" for hierarchy "mac:adder_instance|brent_kung_adder:final_instance|Level_2:lev2" File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/BRENTKUNKADDER.vhd Line: 39
+Info (12128): Elaborating entity "a_and_bc" for hierarchy "mac:adder_instance|brent_kung_adder:final_instance|Level_2:lev2|a_and_bc:g1_0_2" File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Treelevel.vhd Line: 84
+Info (12128): Elaborating entity "Level_3" for hierarchy "mac:adder_instance|brent_kung_adder:final_instance|Level_3:lev3" File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/BRENTKUNKADDER.vhd Line: 40
+Info (12128): Elaborating entity "Level_4" for hierarchy "mac:adder_instance|brent_kung_adder:final_instance|Level_4:lev4" File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/BRENTKUNKADDER.vhd Line: 41
+Info (12128): Elaborating entity "Level_5" for hierarchy "mac:adder_instance|brent_kung_adder:final_instance|Level_5:lev5" File: E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/BRENTKUNKADDER.vhd Line: 42
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4758 megabytes
+    Info: Processing ended: Thu Nov 10 19:50:24 2022
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:35
+
+

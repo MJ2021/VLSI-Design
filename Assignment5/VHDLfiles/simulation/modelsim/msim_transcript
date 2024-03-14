@@ -1,0 +1,159 @@
+# Reading pref.tcl
+# do DUT_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Multiply_and_add.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:52:02 on Nov 10,2022
+# vcom -reportprogress 300 -93 -work work E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Multiply_and_add.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mac
+# -- Compiling architecture arch of mac
+# End time: 19:52:03 on Nov 10,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Treelevel.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:52:03 on Nov 10,2022
+# vcom -reportprogress 300 -93 -work work E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/Treelevel.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Level_1
+# -- Compiling architecture simple of Level_1
+# -- Compiling entity Level_2
+# -- Compiling architecture simple of Level_2
+# -- Compiling entity Level_3
+# -- Compiling architecture simple of Level_3
+# -- Compiling entity Level_4
+# -- Compiling architecture simple of Level_4
+# -- Compiling entity Level_5
+# -- Compiling architecture simple of Level_5
+# End time: 19:52:03 on Nov 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/BRENTKUNKADDER.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:52:03 on Nov 10,2022
+# vcom -reportprogress 300 -93 -work work E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/BRENTKUNKADDER.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity brent_kung_adder
+# -- Compiling architecture simple of brent_kung_adder
+# End time: 19:52:03 on Nov 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/logicgate.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:52:03 on Nov 10,2022
+# vcom -reportprogress 300 -93 -work work E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/logicgate.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity a_and_b
+# -- Compiling architecture trivial of a_and_b
+# -- Compiling entity xor2
+# -- Compiling architecture trivial of xor2
+# -- Compiling entity a_and_bc
+# -- Compiling architecture trivial of a_and_bc
+# -- Compiling entity Cin_map_G
+# -- Compiling architecture trivial of Cin_map_G
+# End time: 19:52:03 on Nov 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/DUT.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:52:03 on Nov 10,2022
+# vcom -reportprogress 300 -93 -work work E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/DUT.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 19:52:03 on Nov 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/higherlogic.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:52:03 on Nov 10,2022
+# vcom -reportprogress 300 -93 -work work E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/higherlogic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity half_adder
+# -- Compiling architecture struct of half_adder
+# -- Compiling entity full_adder
+# -- Compiling architecture struct of full_adder
+# End time: 19:52:04 on Nov 10,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/testbench.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:52:04 on Nov 10,2022
+# vcom -reportprogress 300 -93 -work work E:/Courses/EE671_VLSI/Assignment5/VHDLfiles/testbench.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 19:52:04 on Nov 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 19:52:04 on Nov 10,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behave)
+# Loading work.dut(dutwrap)
+# Loading work.mac(arch)
+# Loading work.a_and_b(trivial)
+# Loading work.half_adder(struct)
+# Loading work.xor2(trivial)
+# Loading work.full_adder(struct)
+# Loading work.cin_map_g(trivial)
+# Loading work.brent_kung_adder(simple)
+# Loading work.level_1(simple)
+# Loading work.level_2(simple)
+# Loading work.a_and_bc(trivial)
+# Loading work.level_3(simple)
+# Loading work.level_4(simple)
+# Loading work.level_5(simple)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 0.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 0.
+#    Time: 40 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 0.
+#    Time: 80 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 0.
+#    Time: 120 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 0.
+#    Time: 160 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 0.
+#    Time: 200 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 0.
+#    Time: 240 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 0.
+#    Time: 280 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 0.
+#    Time: 320 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 0.
+#    Time: 360 ns  Iteration: 0  Instance: /testbench
+# ** Note: SUCCESS, all tests passed.
+#    Time: 400 ns  Iteration: 0  Instance: /testbench
+# End time: 20:24:48 on Nov 10,2022, Elapsed time: 0:32:44
+# Errors: 10, Warnings: 0

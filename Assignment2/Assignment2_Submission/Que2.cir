@@ -1,0 +1,47 @@
+*Xor using CSVL
+.include Unit_inv.txt
+.include matrix.txt
+.include models-180nm
+
+.param Trep1= 40n
+.param Trep2 = {Trep1/2.0}
+.param Trf = {Trep1/20.0}
+.param Tw1 = {Trep1/2.0 - Trf}
+.param Tw2 = {Trep2/2.0 - Trf}
+.param hival=1.6
+.param loval=0.2
+.param w_p=1.2961392U	 a_p=0.360U*w_p 	p_p=0.72U+2*w_p
+.param w_n=2*0.4162298U	 a_n=0.360U*w_n 	p_n=0.72U+2*w_n
+V1 A 0 DC 0 PULSE({loval} {hival} {Tw1} {Trf} {Trf} {Tw1} {Trep1})
+V2 Abar 0 DC 0 PULSE({hival} {loval} {Tw1} {Trf} {Trf} {Tw1} {Trep1})
+V3 B 0 DC 0 PULSE({loval} {hival} {Tw2} {Trf} {Trf} {Tw2} {Trep2})
+V4 Bbar 0 DC 0 PULSE({hival} {loval} {Tw2} {Trf} {Trf} {Tw2} {Trep2})
+.tran 1pS {3*Trep1} 0nS
+vdd supply 0 dc 1.8
+MP1 xor xnor Supply Supply cmosp
++ L=0.18U W=w_p AD = a_p AS = a_p PD = p_p PS = p_p
+MP2 xnor xor Supply Supply cmosp
++ L=0.18U W=w_p AD = a_p AS = a_p PD = p_p PS = p_p
+MN3 xor A 1 0 cmosn
++ L=0.18U W=w_n AD = a_n AS = a_n PD = p_n PS = p_n
+MN4 xor Bbar 1 0 cmosn
++ L=0.18U W=w_n AD = a_n AS = a_n PD = p_n PS = p_n
+MN5 1 Abar 0 0 cmosn
++ L=0.18U W=w_n AD = a_n AS = a_n PD = p_n PS = p_n
+MN6 1 B 0 0 cmosn
++ L=0.18U W=w_n AD = a_n AS = a_n PD = p_n PS = p_n
+MN7 xnor Abar 2 0 cmosn
++ L=0.18U W=w_n AD = a_n AS = a_n PD = p_n PS = p_n
+MN8 xnor A 3 0 cmosn
++ L=0.18U W=w_n AD = a_n AS = a_n PD = p_n PS = p_n
+MN9 2 B 0 0 cmosn
++ L=0.18U W=w_n AD = a_n AS = a_n PD = p_n PS = p_n
+MN10 3 Bbar 0 0 cmosn
++ L=0.18U W=w_n AD = a_n AS = a_n PD = p_n PS = p_n
+.control
+run
+plot V(A)+4 V(Abar)+4 V(B)+2 V(Bbar)+2 V(xor) V(xnor)
+
+.endc
+.end
+

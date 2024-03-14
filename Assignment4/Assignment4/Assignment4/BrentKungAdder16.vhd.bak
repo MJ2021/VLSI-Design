@@ -1,0 +1,38 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Brent_Kung_Adder16 is
+	port(
+		Cin: in std_ulogic;
+		A, B: in std_ulogic_vector(15 downto 0);
+		S: out std_ulogic_vector(15 downto 0);
+		Cout: out std_ulogic
+	);
+end entity Brent_Kung_Adder16;
+architecture struct of Brent_Kung_Adder16 is
+	signal C: std_ulogic_vector(15 downto 1);
+	signal G0, P0: std_ulogic_vector(15 downto 1);
+	signal G1, P1: std_ulogic_vector(7 downto 1);
+	signal G2, P2: std_ulogic_vector(3 downto 1);
+	signal G3, P3: std_ulogic;
+begin
+	--level 0
+	C1_gate: Cin_map_G port map(A => A(0), B => B(0), Cin => Cin, Bit0_G => C(1));
+	Level0: for i in 1 to 15 generate
+		G0_andgate: andgate port map(A => A(i), B => B(i), prod => G0(i));
+		P0_xorgate: xorgate port map(A => A(i), B => B(i), uneq => P0(i));
+	end generate Level0;
+	
+	--level 1
+	C2_gate: abcgate port map(A => G0(1), B => P0(1), C => C(1), abc => C(2));
+	Level1: for i in 1 to 7 generate
+		G1_abcgate: abcgate port map(A => G0(2*i+1), B => P0(2*i+1), C => G0(2*i), abc => G1(i));
+		P1_andgate: andgate port map(A => P0(2*i+1), B => P0(2*i), prod => P1(i));
+	end generate Level1;
+	
+	
+	xor_G : XOR_2 port map(A => X(0), B => X(1), Y => XOR_out);
+	xnor_G : XNOR_2 port map(A => X(2), B => X(3), Y => XNOR_out);
+	
+	and_G : AND_2 port map(A => XOR_out, B => XNOR_out, Y => Y);
+end struct;

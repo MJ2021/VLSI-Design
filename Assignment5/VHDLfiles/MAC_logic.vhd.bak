@@ -1,0 +1,19 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity half_adder is
+	port(A, B: in std_logic; S, C: out std_logic);
+end half_adder;
+
+architecture struct of half_adder is 
+	component a_and_b is port(data_in_0, data_in_1: in std_logic; data_out: out std_logic);
+   end component;
+   component xor2  is port(data_in_0, data_in_1: in std_logic; data_out: out std_logic);
+   end component;
+	
+begin
+
+   sum0: xor2 port map ( data_in_0 => A, data_in_1 => B, data_out => S );
+	carry0: a_and_b port map ( data_in_0 => A, data_in_1 => B, data_out => C );
+
+end struct;
